@@ -1,0 +1,158 @@
+/*---- Fonts ----*/
+@font-face{
+    font-family:"Starjout";
+    src:url(../media/starjout/Stjldbl1.ttf);
+}
+
+/*---- Class ----*/
+/* General */
+*{
+   margin: 0 auto;
+}
+
+/* Class space : Fondo */
+.space{
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Class Star  : Estrellas*/
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+  }
+
+/* Class Start : Texto de Inicio*/
+.start p{
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    left: 20%;
+    z-index: 1;
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
+    animation: start 5s ease-out 1s;
+    -moz-animation: start 5s ease-out 1s;
+    -webkit-animation: start 5s ease-out 1s;
+    -o-animation: start 5s ease-out 1s;
+}
+
+/* Class Logo : Texto del Logo*/
+.logo {
+    position: absolute;
+    text-align: center;
+    font-family: "Starjout";
+    font-size: 500px;
+    top:-20%;
+    color: #FFD700;
+    line-height: 80%;
+    opacity: 0;
+    animation: transform 8s ease-out 7s;
+    -moz-animation: transform 8s ease-out 7s;
+    -webkit-animation: transform 8s ease-out 7s;
+    -o-animation: transform 8s ease-out 7s;
+}
+.sombra{
+    position: relative;
+    width: 100%;
+    min-height: 20vh;
+    top: 10%;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 2;
+}
+/* Class Text : Texto del Episodio */
+.text{
+    position: absolute;
+    font-family: 'Arial',sans-serif;
+    transform: perspective(500px) rotateX(20deg);
+    z-index: 1;
+    color: #FFD700;
+    text-align: justify;
+    font-weight: 700;
+    width: 70%;
+    left: 15%;
+    top: 100%;
+    animation: texts 80s linear 8s;
+    -moz-animation: texts 80s linear 8s;
+    -webkit-animation: texts 80s linear 8s;
+    -o-animation: texts 80s linear 8s;
+}
+
+.text p.subtitle{
+    text-transform: uppercase;
+    font-size: 80px;
+}
+
+.text p.title,.text p.subtitle{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.text p.content{
+    font-size: 40px;
+    line-height: 150%;
+    width: 80%;
+}
+
+
+
+/*---- Animations ----*/
+
+/* Animación de Texto de Inicio*/
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Animación de logo */
+@keyframes transform {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(0.1);
+        top:-3%;
+
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        top:-3%;
+    }
+}
+
+/*Animación Texto*/
+@keyframes texts {
+    0% {
+        visibility: visible;
+        top: 100%;
+        opacity: 1;
+    }
+    90%{
+        top: -160%;
+        opacity: 1;
+    }
+    100% {
+        top: -160%;
+        opacity: 0;
+    }
+}
+
